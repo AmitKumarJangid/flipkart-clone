@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Clone of Flipkart">
+    <title>Flipkart</title>
+    <style>
+        *{margin: 0;
+        padding: 0;}
+        .footer{ display: flex;
+            flex-direction:column ;
+            justify-content: center;
+             align-items: center ;
+           background-color: rgb(47, 40, 40);
+           color: white;
+           width: 100vw;
+           height: 30vh;
+        }
+        .copy{
+            padding-bottom: 4vh;
+        }
+        .copy a{ text-decoration: none;
+        color: antiquewhite;}
+        .other{
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+        }
+        .details{
+            background-color: rgb(47, 40, 40);
+            padding: 1vw;
+            margin-left:8vw;
+        }
+        .details h1{
+            font-size: large;
+            margin-bottom: 0.5vh;
+            color: antiquewhite;
+        }
+
+        .details p a{ text-decoration: none;
+            color: white;
+
+        }
+
+        .details p :hover{
+            text-decoration: underline;
+        }
+
+        .header{display: flex;
+         background-color: rgb(4, 70, 222);
+            width: 100vw;
+            height:10vh ;
+            
+            
+        }
+        .logo{
+          
+            width: 15vw;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            left: 10vw;
+            
+        }
+        .search{display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10vh;
+            position: relative;
+            left: 5vw;
+           
+       
+            
+            
+        }
+        .search input{
+            padding-left: 1vw;
+            height: 4vh;
+            width: 27vw;
+             border: 2px solid black;
+             border-radius: 4px;
+        }
+        .btn{padding: 0 5px;
+            margin-left: 3vw;
+            cursor: pointer;
+            border: 2px solid black;
+           
+            position: relative;
+            left: 7vh;
+            height: 4vh;
+            border-radius: 0.5vh;
+        
+        }
+        .btn:hover{
+            background-color: rgb(3, 115, 252);
+            color: aliceblue;
+            transform: scale(1.2);
+        }
+       .list ul{ display: flex;
+        position: relative;
+        left: 30vh;
+        height: 10vh;
+        width: 35vw;
+        justify-content: center;
+        align-items: center;
+        bottom: 15px;
+       }
+
+       .list ul li{
+        list-style: none;
+        margin: 18px;
+        font-size: 1.3vw;
+       }
+       
+       .list ul li a{text-decoration: none;
+    color: white;}
+
+    .list ul li :hover{
+        color: rgb(0, 140, 255);
+    }
+
+    .container{ display: flex;
+        flex-direction: column;
+        width: 100vw;
+        min-height: calc(100vh - 40vh);
+        background-color: rgb(245, 244, 242);
+
+    }
+    .intro{
+    width: 96vw;
+    height: 17vh;
+margin-left: 2vw;
+margin-right: 2vw;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: white;
+position: relative;
+top: 2vh;
+border-radius: 1vh;
+margin-bottom: 2vh;
+overflow: scroll;}
+
+.items{ margin-right: 5vw;
+position: relative;
+bottom: 0.3vw;
+left: 3vw;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+}
+.items p{text-align: center;}
+
+.items :hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.slider{display: flex;
+justify-content: center;
+
+margin: auto;
+overflow: hidden;
+
+}
+.base{background-color: white;
+margin: 2vw;
+border-radius: 0.5vw;
+display: flex;
+flex-direction: column;
+}
+
+.bitem{display: flex;
+flex-direction: row;
+overflow: scroll;}
+
+.best{
+    margin-inline: 3.5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.best :hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.base h1{font-size: large;
+padding: 3vh;
+}
+
+@media screen and (max-width:1300px){
+  
+
+    .header{height: 30vh;
+        flex-direction: column;
+    justify-content: center;
+align-items: center;}
+
+.list{justify-content: center;
+    align-items: center;
+
+position: relative;
+right: 35vw;}
+
+.list ul li{
+    font-size: larger;
+}
+
+.slider img{ width: 100vw;
+    overflow: hidden;
+
+}
+
+.footer{height: 40vh;
+overflow: scroll;}
+}
+    
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <a href="https://www.flipkart.com/" target="_main"><img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png" height="28vh" alt="Flipkart"></a>
+            </div>
+           <div class="search">
+            <input type="text" class="search" placeholder="Search for Products,Brands and More"></input>
+            <button type="button" class="btn" onclick="alert('Welcome to Flipkart')">Search</button>
+           </div>
+                <div class="list">
+                <pre>   <ul>
+                       <li><a href="https://www.flipkart.com/account/login?ret=/" target="_main"><img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/profile-52e0dc.svg"> Login</img></a></li>
+                       <li><a href="https://www.flipkart.com/viewcart?exploreMode=true&preference=FLIPKART" target="_main"><img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg"> Cart</img></a></li>
+                       <li><a href="https://seller.flipkart.com/sell-online?utm_source=fkwebsite&utm_medium=websitedirect" target="_main"><img src="https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/Store-9eeae2.svg"> Become a Seller</img></a></li>
+                    </ul></pre>
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </header>
+    <main><div class="container">
+        <div class="intro">
+            <div class="items">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/80/80/image/38a459d6d1fc930a.png?q=100" height="64vh" alt="Mobiles & Tablets">
+                <p>Mobiles & Tablets</p>
+            </div>
+            <div class="items">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/80/80/image/629b0a6f61037ae6.png?q=100"  height="64vh" alt="Mobiles & Tablets">
+                <p>Electronics</p>
+            </div>
+            <div class="items">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/80/80/image/f2802fac96dffea9.png?q=100"  height="64vh" alt="Mobiles & Tablets">
+                <p>Appliances</p>
+            </div>
+            <div class="items">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/80/80/image/74f0eb6cc10e2743.png?q=100"  height="64vh" alt="Mobiles & Tablets">
+                <p>Fashion</p>
+            </div>
+            <div class="items">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/80/80/image/f925cfe5ecdf6acf.png?q=100"  height="64vh" alt="Mobiles & Tablets">
+                <p>Beauty</p>
+            </div>
+            <div class="items">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/80/80/image/38d4fbb64c70a3ff.png?q=100"  height="64vh" alt="Mobiles & Tablets">
+                <p>Home & Kitchen</p>
+            </div>   <div class="items">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/80/80/image/fef14e08ec83a6d7.png?q=100"  height="64vh" alt="Mobiles & Tablets">
+                <p>Furniture</p>
+            </div>
+            <div class="items">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/80/80/image/83de409bda2f3834.png?q=100"  height="64vh" alt="Mobiles & Tablets">
+                <p>Flights</p>
+            </div>
+            <div class="items">
+                <img src="https://rukminim2.flixcart.com/fk-p-flap/80/80/image/711174cfe1d2fa75.png?q=100"  height="64vh" alt="Mobiles & Tablets">
+                <p>Grocery</p>
+            </div>
+           
+        </div>
+        <div class="slider">
+            
+                <img src="https://i.gadgets360cdn.com/large/big-billion-days-2022-sale_1663819658737.png" width="1400vw" height="450vh" alt="Flipkart Offer" class="slider">
+            </div>
+        
+        <div class="base">
+            <h1>Best Mobiles</h1><hr>
+            <div class="bitem">
+            <div class="best">
+                <img src="https://d2xamzlzrdbdbn.cloudfront.net/products/71a634f4-3dc4-4dc0-86f6-e31de6e1020c23210602.jpg" height="150vw">
+                <p>Nothing Phone 2</p>
+                <p>incl of offers</p>
+            </div>
+            <div class="best">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/5/e/3/g84-5g-paym0018in-motorola-original-imagsy5zmhvkcfsx.jpeg?q=70&crop=false" height="150vw">
+                <p>Motorola G84</p>
+                <p>incl of offers</p>
+            </div>
+            <div class="best">
+                <img src="https://m.media-amazon.com/images/I/8131pwAojZL._AC_UF1000,1000_QL80_.jpg" height="150vw">
+                <p>Samsung S21 5G </p>
+                <p>incl of offers</p>
+            </div>
+            <div class="best">
+                <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/mobile/3/a/x/f5-5g-mzb0e7kin-poco-original-imagpep3dcnkbxp4.jpeg?q=70&crop=false" height="150vw">
+                <p>Poco M6 Pro 5G</p>
+                <p>incl of offers</p>
+            </div>
+            <div class="best">
+                <img src="https://d2xamzlzrdbdbn.cloudfront.net/products/cba68923-dd7f-4988-aba0-6db7a786820223250631_182x182.jpg" height="150vw">
+                <p>Realme 11 5G</p>
+                <p>incl of offers</p>
+            </div>
+            <div class="best">
+                <img src="https://d2xamzlzrdbdbn.cloudfront.net/products/31397d68-9a96-4c1e-9805-0c8e1bc2c0bd23251042_182x182.jpg" height="150vw">
+                <p>Vivo T2x 5G</p>
+                <p>incl of offers</p>
+            </div>
+        
+        
+        </div>
+        </div>
+
+
+
+
+
+    </div>
+
+    </main>
+    <footer>
+        <div class="footer">
+        <div class="copy">
+          <p> Copyright &copy; All Rights Reserved Flipkart | Developed By <span><a href="https://www.linkedin.com/in/amit-kumar-jangid-21541928b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ">Amit Kumar Jangid</a></span></p>
+        
+        </div>
+        <div class="other">
+            <div class="details">
+                <h1>ABOUT :</h1>
+                <p><a href="https://www.flipkart.com/helpcentre?otracker=${otracker}_navlinks" target="_main">Contact Us</a></p>
+                <p><a href="https://corporate.flipkart.net/corporate-home" target="_main">About Us</a></p>
+                <p><a href="https://www.flipkartcareers.com/?otracker=${otracker}_navlinks#!/" target="_main">Careers</a></p>
+            </div>
+            <div class="details">
+                <h1>HELP :</h1>
+                <p><a href="https://www.flipkart.com/pages/payments" target="_main">Payments</a></p>
+                <p><a href="https://www.flipkart.com/pages/shipping" target="_main">Shipping</a></p>
+                <p><a href="https://www.flipkart.com/helpcentre?catalog=55c9c8e2b0000023002c1702&view=CATALOG" target="_main">FAQ</a></p>
+            </div>
+            <div class="details">
+                <h1>CONSUMER POLICY</h1>
+                <p>Cancellation & Returns</p>
+                <p>Terms of Service</p>
+                <p>Privacy</p>
+            </div>
+            <div class="details">
+                <h1>SOCIAL</h1>
+                <p><a href="https://www.youtube.com/flipkart" target="_main">Youtube</a></p>
+                <p><a href="https://www.facebook.com/flipkart" target="_main">Facebook</a></p>
+                <p><a href="https://twitter.com/flipkart" target="_main">Twitter</a></p>
+            </div>
+            <div class="details">
+                <h1>MAIL US</h1>
+                <p>Flipkart Internet Private Limited</p>
+                <p>Building Alyssa,Begonia</p>
+                <p>Bangaluru,Karnataka INDIA</p>
+            </div>
+        </div>
+
+        </div>
+    </footer>
+</body>
+</html>
